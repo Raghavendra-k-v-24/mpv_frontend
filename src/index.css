@@ -1,11 +1,17 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "daisyui";
 
 @custom-variant dark (&:is(.dark *));
 
 body {
   margin: 0;
   padding: 0;
+}
+
+/* Daisy UI Step connector */
+.steps .step::before {
+  height: 3px;
 }
 
 @theme inline {

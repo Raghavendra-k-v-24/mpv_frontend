@@ -1,10 +1,11 @@
-import React from "react";
-import CustomCard from "./CustomCard";
+import FileUpload from "./FileUpload";
+import Sections from "./Sections";
 
 const Body = () => {
   return (
-    <div className="flex-1 w-full px-3 py-2.5 flex items-center justify-center bg-gray-50">
-      <CustomCard />
+    <div className="flex-1 w-full flex flex-col py-4 px-3 gap-5">
+      <FileUpload />
+      <Sections />
     </div>
   );
 };

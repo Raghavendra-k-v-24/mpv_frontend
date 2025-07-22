@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import axios from "axios";
-import loading_gif from "../assets/loading2.gif";
+import loading_gif from "../assets/loading.gif";
 
 const CustomCard = () => {
   const [file, setFile] = useState(null);
@@ -45,8 +45,23 @@ const CustomCard = () => {
           },
         }
       );
-      const result = response.data;
-      toast.success(result.message);
+      const { message, task_id } = response.data;
+      toast.success(message);
+
+      const interval = setInterval(async () => {
+        const response = await axios.get(
+          `http://localhost:5000/task/${task_id}`
+        );
+        const { state, result } = response.data;
+        console.log(state, result);
+        if (state == "SUCCESS") {
+          toast.success("File processing completed.");
+          clearInterval(interval);
+        } else if (state == "FAILURE") {
+          toast.error("Error in processing file. Try again!");
+          clearInterval(interval);
+        }
+      }, 3000);
     } catch (error) {
       toast.error(error.response.data.message);
     }
