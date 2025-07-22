@@ -12,17 +12,7 @@ import Section_9 from "./Section_9";
 
 const Sections = () => {
   const [currentStep, setCurrentStep] = useState(0);
-  const sections = [
-    "Section 1",
-    "Section 2",
-    "Section 3",
-    "Section 4",
-    "Section 5",
-    "Section 6",
-    "Section 7",
-    "Section 8",
-    "Section 9",
-  ];
+  const sections = [" 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9"];
   const sectionComponents = [
     <Section_1 />,
     <Section_2 />,
@@ -53,7 +43,7 @@ const Sections = () => {
             key={index}
             className={`step ${index <= currentStep ? "step-accent" : ""}`}
           >
-            {label}
+            {/* {label} */}
           </li>
         ))}
       </ul>
