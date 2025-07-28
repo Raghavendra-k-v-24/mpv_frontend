@@ -1,17 +1,36 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "daisyui";
+@plugin 'tailwind-scrollbar';
 
 @custom-variant dark (&:is(.dark *));
 
 body {
   margin: 0;
   padding: 0;
+  font-family: "Inter";
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1c398e; /* Thumb color */
+  border-radius: 10px;
 }
 
 /* Daisy UI Step connector */
 .steps .step::before {
   height: 3px;
+  /* @apply bg-gray-400;
+  @apply text-gray-400; */
+}
+
+.step::after {
+  /* @apply bg-gray-400;
+  @apply text-gray-400;
+  @apply border-gray-400; */
 }
 
 @theme inline {
