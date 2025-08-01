@@ -12,12 +12,17 @@ body {
 }
 
 ::-webkit-scrollbar {
+  /* display: none; */
+  width: 5px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #1c398e; /* Thumb color */
-  border-radius: 10px;
+  border-radius: 100px;
 }
 
 /* Daisy UI Step connector */

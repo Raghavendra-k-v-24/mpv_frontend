@@ -5,17 +5,13 @@ import Form from "../../assets/1003_Form.jpg";
 import BenifitInfo from "./BenifitInfo";
 const Benefits = () => {
   return (
-    <section className="h-max w-full flex px-50 xl:px-60 py-10 justify-between items-center bg-blue-50 overflow-auto ">
+    <section className="h-max w-full flex px-50 xl:px-60 py-10 justify-between items-center bg-blue-50">
       <div className="h-full w-full flex flex-col items-center gap-2">
         <Label className="text-2xl font-semibold text-blue-900">
           1003 Mortgage Application Form
         </Label>
-        <div className="h-[320px] w-full flex overflow-auto shadow-xl/60 shadow-blue-900 rounded-md">
-          <img
-            src={Form}
-            alt="Company Logo"
-            className="h-max w-max overflow-auto "
-          />
+        <div className="h-[350px] w-full flex overflow-auto shadow-xl/60 shadow-blue-900 rounded-md no-scrollbar">
+          <img src={Form} alt="Company Logo" className="h-max w-max " />
         </div>
         <Label className="text-xs font-semibold mt-3 text-blue-900">
           Don't have the form?
